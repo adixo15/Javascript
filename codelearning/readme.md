@@ -96,4 +96,87 @@ It is commonly used for random number generation in programs
 To generate random numbers within a specific range:
 Formula:
 Math.floor(Math.random() * (max - min + 1)) + min
+
+11.The Date object in JavaScript is used to work with dates and times.
+It allows creating, formatting, and manipulating date-time values easily.
+⚡ The type of a Date is always an object in JavaScript.Dates can be created using the Date() constructor in several ways:Date.now() → Returns the current timestamp in milliseconds since January 1, 1970 (Unix Epoch).
+myDate.getTime() → Returns the timestamp of a specific date.
+To convert milliseconds to seconds, divide by 1000 and optionally use Math.floor() to remove decimals.You can extract specific parts of a date using getter methods
+
+12.JavaScript Arrays
+Arrays store multiple values in a single variable — they can hold mixed data types.
+Declaration: let arr = [1,2,3] or let arr = new Array(1,2,3)
+Access Element: arr[index] → returns value at given index.
+push() → adds element at the end of the array.
+pop() → removes the last element of the array.
+unshift() → adds element at the beginning and shifts others.
+shift() → removes the first element of the array.
+includes() → checks if a value exists → returns true/false.
+indexOf() → returns the index of a value (returns -1 if not found).
+join() → converts array to string by removing brackets.
+slice(start, end) → returns part of array (shallow copy) without changing original.
+splice(start, count) → removes elements from original array and returns them.
+Difference:
+slice() → does not modify the original array.
+splice() → modifies the original array.
+
+13.JavaScript Array Combination & Utility Methods:
+push(array) → Adds another array as a single element, creating a nested array.
+concat() → Joins two or more arrays into a new array (doesn’t modify original).
+spread operator (...) → Another way to merge arrays quickly (acts like unpacking).
+flat(Infinity) → Flattens nested arrays into a single-level array.
+Array.isArray(value) → Checks whether the given value is an array → returns true/false.
+Array.from(value) → Converts iterable objects (like strings) into arrays.
+Array.from(object) → Returns empty array if the input is a non-iterable object.
+Array.of(a, b, c, …) → Creates a new array from the given set of values.
  
+14.JavaScript Objects:(LITREALS)
+Object → Used to store data in key–value pairs.
+Declaration: const obj = { key: value } or using new Object().
+Symbols (Symbol()) → Used to create unique keys for objects.
+Accessing values:
+obj.key → using dot notation
+obj["key"] → using square brackets (for keys with spaces or quotes)
+For symbol keys: must use square brackets → obj[mySym].
+Modify values: assign new value → obj.key = newValue.
+Object.freeze(obj) → makes the object immutable (can’t change values).
+Adding functions: functions can be defined as methods inside objects.
+this keyword: used inside methods to refer to current object’s properties.
+Example: this.name → accesses the name key of the same object
+
+15.const tinderUser = {} → Creates a non-singleton object.
+tinderUser.id = "123abc" → Adds key-value pairs dynamically.
+const regularUser = { fullname: { userfullname: { firstname: "hitesh" }}} → Shows nested objects.
+regularUser.fullname.userfullname.firstname → Accesses nested object values.
+Object.assign({}, obj1, obj2) → Merges multiple objects into one (older method).
+{...obj1, ...obj2, ...obj3} → Spread operator for merging objects (modern & preferred).
+users = [{}, {}, {}] → Example of an array of objects.
+users[1].email → Accesses the email of the second object in the array.
+Object.keys(tinderUser) → Returns all keys of the object as an array.
+Object.values(tinderUser) → Returns all values of the object as an array.
+Object.entries(tinderUser) → Returns key-value pairs as nested arrays.
+tinderUser.hasOwnProperty('isLoggedIn') → Checks if a key exists in the object.
+const {courseInstructor: instructor} = course → Object destructuring, renaming key to variable.
+JSON → JavaScript Object Notation, used for data exchange (looks like object syntax).
+
+16.Functions in Js
+function saymyname() → Defines a basic function that prints "Aditya" to console.
+📝 Used to group reusable code blocks.
+add(num1, num2) → Adds two numbers and returns the sum.
+📝 Returns value using return, doesn’t auto print.
+console.log("Result", add(2,3)) → Prints the returned value from function.
+loggedIn(username) → Checks if username is provided; otherwise asks for it.
+📝 Uses if(!username) to validate input and return to exit early.
+calculateCartPrice(val1) → Returns only one argument, ignoring others.
+📝 Shows how extra arguments are ignored if not handled.
+price(num1, ...val1) → Uses rest operator (...) to collect multiple arguments as an array.
+📝 Allows handling of variable-length inputs.
+handleObject(anyobject) → Takes an object and logs its username and price.
+📝 Demonstrates passing and accessing object properties in functions.
+returnSecondValue(getArray) → Returns the second element of any passed array.
+📝 Illustrates function working with arrays and indexing.
+Concept:
+...val1 → Rest parameter, groups extra arguments into an array.
+return → Sends a value back to the caller.
+!username → Checks for missing/falsey input.
+function → Keyword to declare reusable blocks of code.

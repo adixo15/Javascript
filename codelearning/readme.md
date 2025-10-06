@@ -180,3 +180,103 @@ Concept:
 return → Sends a value back to the caller.
 !username → Checks for missing/falsey input.
 function → Keyword to declare reusable blocks of code.
+
+17.Scopes in js
+let and const → Block-scoped, can only be accessed inside {} where declared.
+var → Function-scoped, can escape block {} → ❌ avoid using it.
+Lexical Scope (Nested Functions):
+Inner functions can access parent variables, but parents can’t access child variables.
+📝 This is called Lexical (Static) Scope — variables are resolved based on where functions are defined, not where they’re called.
+
+18.this inside object methods refers to the object itself.
+this in the global scope refers to the global object (window in browser).
+this inside a normal function is undefined in strict mode.
+this inside an arrow function doesn’t have its own context (lexical this).
+user.welcome() accesses object keys using this.
+console.log(this) globally shows an empty object in Node and window in browser.
+console.log(this.username) gives undefined because this isn’t bound to local variables.
+Arrow functions don’t bind this, they use parent scope’s this.
+Arrow function with {} needs return keyword.
+Arrow function without {} automatically returns the expression.
+For returning objects in arrow functions, wrap them in parentheses ({}).
+const info = () => ({name:"Aditya"}) returns an object properly.
+
+19.IIFE → A function that is declared and executed immediately.
+Normal function cannot be invoked immediately without wrapping in parentheses.
+Syntax: (function(){ /* code */ })(); → wrap function in () and add () to execute.
+Arrow functions can also be IIFE: ((name) => { /* code */ })(argument).
+IIFE is commonly used to create a private scope and avoid polluting global namespace.
+
+20.if checks a condition and runs code only if it's true.
+Comparison operators: <, >, <=, >=, ==, !=, ===, !== compare values.
+== compares value only; === compares value + type.
+Multiple if...else if...else handle different conditions sequentially.
+&& (AND) runs if all conditions are true.
+|| (OR) runs if any one condition is true.
+Variables declared inside if with let/const are block-scoped (not accessible outside).
+You can write single-line if statements without {} for short code.
+
+21.switch is used to check one value against multiple possible cases.
+Each case represents a possible match for the value.
+break stops further case checking once a match is found.
+If no case matches, the default block executes.
+Useful alternative to multiple if...else if statements.
+
+22.if checks truthy or falsy values before running code.
+Falsy values: false, 0, -0, 0n, "", null, undefined, NaN.
+Truthy values: non-empty strings, arrays [], objects {}, and functions.
+Object.keys(obj).length === 0 checks if an object is empty.
+Nullish Coalescing (??) returns the first non-null/undefined value.
+Ternary operator (? :) is a shorthand for if...else in one line.
+
+23.for loop runs code repeatedly until a condition becomes false.
+Variables declared with let inside the loop are block-scoped.
+Nested loops mean one loop runs inside another (inner runs completely for each outer iteration).
+.length gives the total number of elements in an array.
+break stops the loop immediately when the condition is met.
+continue skips the current iteration and moves to the next one.
+
+24.while loop runs as long as the condition is true.
+Used when the number of iterations isn’t fixed.
+Increment inside the loop is necessary to avoid infinite loops.
+do...while runs the code at least once before checking the condition.
+Commonly used to execute code once and then repeat based on a condition.
+
+25.for...of loop iterates directly over values of arrays, strings, or iterables.
+In arrays, it gives each element one by one.
+In strings, it gives each character (including spaces).
+Map stores key-value pairs and maintains insertion order.
+Using [key, value] in for...of destructures each map entry.
+for...of cannot be used with plain objects (not iterable).
+
+26.for...in loop iterates over keys (properties) of an object.
+Use square brackets object[key] to access values.
+It can also be used on arrays, giving indexes instead of values.
+for...in does not work with Map because Map is not a plain object.
+Best suited for objects, not for arrays or maps.
+
+27.forEach() is used to iterate over arrays and execute a function for each element.
+It takes a callback function (can be normal or arrow).
+You can access the item, index, and entire array inside it.
+It doesn’t return a new array — it’s used mainly for performing actions (like printing, updating, or accessing data).
+Works well for looping through arrays of objects to access specific properties easily.
+
+28.forEach() executes a function for each array item but does not return anything.
+filter() creates a new array with elements that satisfy a given condition.
+It’s mainly used to extract specific data from an array based on logic.
+Inside filter(), the callback must return true for items to be included.
+Example: filtering books by genre or publish year gives a customized subset of data.
+
+29..map() is used to create a new array by transforming each element of an existing array.
+It always returns a new array of the same length as the original.
+The callback function inside .map() runs for every element and returns the modified value.
+Commonly used for data transformation — e.g., changing formats, applying calculations, or extracting specific properties.
+It does not modify the original array (it’s non-destructive).
+
+30..reduce() is used to reduce an array to a single value by applying a function on each element.
+The callback function takes two main arguments:
+Accumulator – keeps the running result.
+Current value – the current element being processed.
+It can also take an initial value for the accumulator.
+Commonly used for sum, product, maximum/minimum, or merging data.
+It does not change the original array.

@@ -1,1 +1,3 @@
-console.log(real_array) 
+coding.forEach(function val(val){
+//     console.log(val)
+// })

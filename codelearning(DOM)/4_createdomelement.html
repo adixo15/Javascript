@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color:white
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    //  console.log(div);//creates a new element div
+     div.className = "main"
+     div.id = Math.round(Math.random() * 10 + 1)
+      div.setAttribute("title", "generated title")
+    //   console.log(div);//this creates with a classname id and title
+    div.style.backgroundColor="orange"
+    div.style.padding="20px"
+    div.style.border="none"
+    div.style.borderRadius="20px"
+    // console.log(div)//This give stylings to the div
+    // div.innerText="He welcome to my webpage Stay active"
+    // console.log(div) this adds text to the div but we dont use it because it overwrites instead of this we use the next written code
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText)
+    document.body.appendChild(div)//This attaches the entire created element to the page
+</script>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #title{
+            padding: 15px;
+            margin: 15px;
+            border: 2px solid white;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+        .container{
+            background-color: bisque;
+            color: black;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My website</h1>
+    <h2>Login</h2>
+    <h2>Signup</h2>
+    <h2>Fuckkoff</h2>
+    <div id="title">Hey Man
+
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt modi cupiditate, ea hic ex
+            eveniet vel architecto rerum tempore magni.
+        </div>
+    </div>
+    <ul>
+    <li>Home</li>
+    <li>About </li>
+    <li>Contact</li>
+    <script>
+        document.getElementsByClassName// if we want to acess class we need to use className
+        document.getElementById//To access id use this
+        document.getElementById("title").getAttribute('id')//it gives us the attributes it contain
+        document.getElementsByClassName("container").innerHTML="fuck off"//
+        document.getElementsByClassName("container").setAttribute('container','hello heading')//the attribute value of an HTML element
+        const title=document.getElementById("title")//we can store an elemnt inside a varaible
+        title.style.backgroundColor="green"//can give stylings to it
+        title.innerHTML//gives the html tags too
+        title.innerText//shows only the visible values
+        title.textContent//show the displayed as well as hidden values
+        document.querySelector('h2')//It gives only the first coming h2 in the code
+        document.querySelector('.container')//we can acess any element using css element
+        document.querySelector('ul').querySelector('li').style.backgroundColor="gray"//selects the element of the list and adds stylings to it
+        document.querySelectorAll('ul')//it gives us a nodelist and a protype with several methods here we cant directly apply styles we have to run foreach loop or give braces to change the styling
+    </script>
+</body>
+
+</html>

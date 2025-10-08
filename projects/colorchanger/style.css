@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.button {
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Individual button colors */
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#orange {
+    background-color: orange;
+}
+
+/* Optional: hover effect */
+.button:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}

@@ -1,0 +1,67 @@
+/* --- General Page Styling --- */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* --- Center Container --- */
+.centre {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* --- Banner (Title) --- */
+#banner span {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f8f8f8;
+  display: inline-block;
+  border-bottom: 2px solid #00ffff;
+  padding-bottom: 5px;
+}
+
+/* --- Clock Display --- */
+#clock {
+  margin-top: 25px;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  animation: glow 4s infinite alternate;
+}
+
+/* --- Glowing Animation with Changing Colors --- */
+@keyframes glow {
+  0% {
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+  }
+  25% {
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 45px #ff00ff;
+  }
+  50% {
+    color: #ff1493;
+    text-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493;
+  }
+  75% {
+    color: #00ff7f;
+    text-shadow: 0 0 15px #00ff7f, 0 0 30px #00ff7f, 0 0 45px #00ff7f;
+  }
+  100% {
+    color: #1e90ff;
+    text-shadow: 0 0 15px #1e90ff, 0 0 30px #1e90ff, 0 0 45px #1e90ff;
+  }
+}

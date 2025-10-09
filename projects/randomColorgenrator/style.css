@@ -1,0 +1,111 @@
+/* 🌷 Light Pastel Theme — Calm & Modern */
+:root {
+  --pastel-blue: #dbeafe;
+  --pastel-pink: #ffe4e6;
+  --pastel-mint: #d1fae5;
+  --pastel-lavender: #ede9fe;
+  --pastel-yellow: #fef9c3;
+  --text-dark: #374151;
+  --text-light: #6b7280;
+  --bg-light: #fafafa;
+}
+
+/* Base layout */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s ease;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-bottom: 40px;
+}
+
+/* ✨ Button styles */
+button {
+  padding: 12px 28px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text-dark);
+  background-color: var(--pastel-blue);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 🌈 Different color buttons for theme */
+#start {
+  background-color: var(--pastel-mint);
+}
+
+#stop {
+  background-color: var(--pastel-pink);
+}
+
+/* Hover states — soft transitions */
+#start:hover {
+  background-color: #a7f3d0; /* lighter mint */
+}
+
+#stop:hover {
+  background-color: #fecdd3; /* lighter pink */
+}
+
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌸 Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1, h2, button {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Optional container theme accent */
+body::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: var(--pastel-lavender);
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: -1;
+}
+

@@ -55,3 +55,19 @@ replaceWith(newli) → Replaces an existing element with another.
 outerHTML = '<li>TypeScript</li>' → Replaces an element with full new HTML content.
 querySelector('li:last-child') → Selects the last <li> element.
 remove() → Deletes the selected element from the DOM.
+
+6.onclick → Old method to handle click events (not preferred).
+addEventListener('click', fn) → Modern way to attach event listeners.
+Event Bubbling → Events move from child to parent (bottom → top).
+e.stopPropagation() → Stops the event from bubbling further up the DOM.
+e.preventDefault() → Prevents default browser behavior (e.g., link navigation).
+e.target → Refers to the actual element clicked.
+e.target.tagName → Returns the tag name (like IMG, LI, A) of the clicked element.
+if (e.target.tagName === 'IMG') → Ensures the code runs only for image clicks.
+e.target.parentNode.remove() → Removes the <li> element of the clicked image.
+Event Delegation → Attaching one listener to a parent element to manage all child events efficiently.
+
+7.setTimeout(sayAditya, 3000) → Executes the function sayAditya after 3 seconds (asynchronous execution).
+✅ setTimeout(greet, 3000) → Runs the greet function after 3 seconds, which changes the <h1> text to “Welcome to my page”.
+✅ clearTimeout(greet) (inside click event) → ❌ Incorrect — this should be clearTimeout(changegreet) to stop the scheduled timeout before it executes.
+✅ document.getElementById('stop').addEventListener('click', …) → Adds a click event listener to the Stop button that cancels the timeout and logs “stopped”.

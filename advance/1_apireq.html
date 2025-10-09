@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #ffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Api Methods:
+     0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+<script>
+    const request='https://api.github.com/users/hiteshchoudhary'
+    const xhr=new XMLHttpRequest()//XMLHttpRequest is a built-in browser object in JavaScript used to send HTTP requests to a server without reloading the page.
+    // It’s part of AJAX (Asynchronous JavaScript and XML) — a technique for updating parts of a web page dynamically.new XMLHttpRequest() creates a new instance (an object) of the XMLHttpRequest class.
+    // xhr stores object to use
+    xhr.open('GET', request)//this will get request of the api we stored earlier
+     xhr.onreadystatechange =function(){//this function will check whether request is sent or not
+         console.log(xhr.readyState);
+         if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)//if resposnse is 4 that means the request is sucessfull and it gives the text output this coverts the text into json object
+            console.log(typeof data);//prints the type of data here it is object if we have not converted in upper step it would be string 
+            console.log(data.followers);//this is how we acess properties
+     }
+    }
+    xhr.send()
+</script>
+</body>
+</html>

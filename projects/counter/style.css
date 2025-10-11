@@ -1,0 +1,68 @@
+/* Background setup */
+body {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Counter container */
+.container {
+  text-align: center;
+}
+
+/* Counter number */
+.count {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Buttons (matching the glowing gradient style) */
+button {
+  color: white;
+  font-size: 1.5rem;
+  background: #000;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Gradient border animation */
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ffb347, #ff00ff, #00ffff, #ffb347);
+  background-size: 300% 300%;
+  animation: glow 3s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Gradient animation */
+@keyframes glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+button:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}

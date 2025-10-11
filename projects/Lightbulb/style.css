@@ -1,0 +1,43 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+#bulb {
+  width: 150px;
+  transition: 0.3s ease;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+/* Button styling */
+#togle-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background-color: #00bfff;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#togle-btn:hover {
+  background-color: #008ecc;
+  transform: scale(1.05);
+}

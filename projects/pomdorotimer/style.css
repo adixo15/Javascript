@@ -1,0 +1,72 @@
+ body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #8a2be2, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .timer {
+      font-size: 4rem;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .button-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ====== Glowing Button Style ====== */
+    .glow-btn {
+      color: white;
+      font-size: 1.2rem;
+      background: #000;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 40px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .glow-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 40px;
+      padding: 2px;
+      background: linear-gradient(90deg, #8a2be2, #00ffff, #8a2be2);
+      background-size: 300% 300%;
+      animation: glow 3s linear infinite;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      z-index: -1;
+    }
+
+    @keyframes glow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glow-btn:hover {
+      box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+      transform: scale(1.05);
+    }

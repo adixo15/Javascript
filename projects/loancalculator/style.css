@@ -1,0 +1,103 @@
+/* Reset some basic styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container styling */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+.container h1 {
+    font-size: 28px;
+    color: #d81b60;
+    margin-bottom: 25px;
+}
+
+/* Paragraph and labels */
+.container p {
+    font-size: 16px;
+    margin: 18px 0;
+    color: #880e4f;
+}
+
+/* Inputs */
+.input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #f48fb1;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.input:focus {
+    border-color: #d81b60;
+    box-shadow: 0 0 8px rgba(216,27,96,0.4);
+}
+
+/* Monthly Payment display */
+.payment {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ad1457;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255, 192, 203, 0.3);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .container h1 {
+        font-size: 24px;
+    }
+}
+#calculate-btn {
+    background: linear-gradient(135deg, #6a11cb, #9b25fc); /* nice gradient */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(252, 37, 248, 0.3);
+}
+
+#calculate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 103, 231, 0.711);
+}
+
+#calculate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 15px rgba(186, 28, 214, 0.3);
+}

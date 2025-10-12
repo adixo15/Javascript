@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", "Courier New", Courier, monospace;
+  background: linear-gradient(135deg, #1e1e2f, #0f2027);
+  color: #e0e0e0;
+}
+
+/* Container */
+.password-container {
+  background: rgba(40, 40, 60, 0.8);
+  width: 480px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 255, 180, 0.15);
+  margin: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 150, 0.15);
+  transition: 0.3s ease;
+}
+
+.password-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 255, 180, 0.3);
+}
+
+/* Input box */
+.input-container {
+  border: 2px solid rgba(0, 255, 150, 0.2);
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 10px rgba(0, 255, 150, 0.1);
+}
+
+.input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #a8ffbf;
+  width: 80%;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0px;
+}
+
+/* Copy icon */
+.fa-copy {
+  cursor: pointer;
+  color: #a8ffbf;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.fa-copy:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+  color: #5fffac;
+}
+
+/* Button */
+.btn {
+  background: linear-gradient(90deg, #00b09b, #96c93d);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 255, 180, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Alert box */
+.alert-container {
+  position: fixed;
+  width: 300px;
+  height: 50px;
+  background: linear-gradient(90deg, #00b09b, #96c93d);
+  right: -350px; /* hidden off-screen initially */
+  bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: right 0.4s ease;
+}
+
+.alert-container.active {
+  right: 20px; /* visible on-screen */
+}
